@@ -1,6 +1,6 @@
 <?php
 
-namespace Pulunomoe\Controller;
+namespace Com\Pulunomoe\Controller;
 
 use PDO;
 use Psr\Http\Message\ResponseInterface;
@@ -10,13 +10,6 @@ use Slim\Views\Twig;
 
 abstract class Controller
 {
-	protected PDO $pdo;
-
-	public function __construct(PDO $pdo)
-	{
-		$this->pdo = $pdo;
-	}
-
 	public function render(ServerRequest $request, Response $response, string $template, array $data = []): ResponseInterface
 	{
 		return Twig::fromRequest($request)->render($response, $template, $data);

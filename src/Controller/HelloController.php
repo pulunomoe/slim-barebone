@@ -1,6 +1,6 @@
 <?php
 
-namespace Pulunomoe\Controller;
+namespace Com\Pulunomoe\Controller;
 
 use PDO;
 use Psr\Http\Message\ResponseInterface;
